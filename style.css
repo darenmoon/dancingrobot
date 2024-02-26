@@ -1,12 +1,12 @@
-h1 {
+h1, p, footer {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 }
 
 .robots {
 	flex-wrap: wrap;
-	display: flex;
-	justify-content: center;
+	display:flex;
+	justify-content:center;
 }
 
 .head, 
@@ -27,12 +27,13 @@ h1 {
 } 
 
 .eyes {
-	display: flex
+	display:flex;
 }
 
 .head:hover {
-	width: 300px;
-    transition: 1s ease-in-out;
+	transform: skewY(0deg);
+	animation: one 1s infinite;
+	animation-direction: alternate;
 }
 
 .upper_body { 
@@ -51,9 +52,25 @@ h1 {
 	margin-right: 10px; 
 } 
 
+.left_arm:hover {
+	-webkit-transform: rotate(-120deg);
+    -moz-transform: rotate(-120deg);
+    -o-transform: rotate(-120deg);
+    -ms-transform: rotate(-120deg);
+    transform: rotate(-120deg);
+}
+
 .right_arm { 
 	margin-left: 10px; 
 } 
+
+.right_arm:hover {
+	-webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
 
 .torso { 
 	width: 200px; 
@@ -64,9 +81,8 @@ h1 {
 .lower_body { 
 	width: 200px; 
 	height: 200px;
-	/* This is another useful property. Hmm what do you think it does?*/
 	margin: 0 auto;
-	display: flex; 
+	display:flex;
 } 
 
 .left_leg, .right_leg { 
@@ -80,15 +96,23 @@ h1 {
 } 
 
 .left_leg:hover {
-	-webkit-transform: rotate(20deg);
-    -moz-transform: rotate(20deg);
-    -o-transform: rotate(20deg);
-    -ms-transform: rotate(20deg);
-    transform: rotate(20deg);
+	-webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
 }
 
 .right_leg { 
 	margin-left: 30px; 
+}
+
+.right_leg:hover {
+	-webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
 }
 
 .left_eye, .right_eye { 
@@ -99,8 +123,6 @@ h1 {
 } 
 
 .left_eye { 
-	/* These properties are new and you haven't encountered
-	in this course. Check out CSS Tricks to see what it does! */
 	position: relative; 
 	top: 100px; 
 	left: 40px; 
@@ -112,6 +134,13 @@ h1 {
 	left: 120px; 
 }
 
+.right_eye:hover {
+	-webkit-transform: rotateX(80deg);
+    -moz-transform: rotateX(80deg);
+    -o-transform: rotateX(80deg);
+    -ms-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+}
 
 
 
